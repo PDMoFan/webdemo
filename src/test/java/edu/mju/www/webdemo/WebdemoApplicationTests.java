@@ -24,6 +24,8 @@ public class WebdemoApplicationTests {
 //        Admin admin=new Admin();
 //        User user=new User();
         System.out.println(admin.toString());
+        System.out.println(admin.toString());
+        System.out.println(admin.toString());
         System.out.println(user.toString());
     }
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>成功</h1>
+<!--th:text 将div中的文本内容设置为指定的${}值-->
+<!--/*@thymesVar id="hello" type="java.util.Map"*/-->
+<div th:text="${hello}">
+    这里当th:text有值时不显示！
+</div>
+<div th:utext="${hello}">
+    这里当th:utext有值时不显示！
+</div>
+<!--th:each 每次遍历都会生成当前标签  3个h3-->
+<h3 th:text="${user}" th:each="user:${users}"></h3>
+<!--对比写在不同标签下的差别 3个span-->
+<h3>
+    <span th:each="user:${users}">这里当th:each没有值时原样显示！[[${user}]]</span>
+</h3>
+</body>
+</html>
